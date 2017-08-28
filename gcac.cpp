@@ -1,3 +1,5 @@
+// greedy candidates in codechef (easy) code:gcac
+
 #include<iostream>
 #include<stdio.h>
 using namespace std;
