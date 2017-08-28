@@ -1,3 +1,5 @@
+// chef and rainbow in codechef 
+
 #include<iostream>
 #include<stack>
 
