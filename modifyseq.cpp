@@ -1,11 +1,12 @@
 #include<iostream>
+using namespace std;
 int main(){
     int t;
     cin>>t;
     while(t--){
         int n;
         cin>>n;
-        int arr[n];
+        long int arr[n],count=0,i;
         for(i=0;i<n;i++)
             cin>>arr[i];
         for(i=0;i<n-1;i++){
@@ -17,16 +18,19 @@ int main(){
                 arr[i+1]=arr[i+1]-arr[i];
                 arr[i]=0;
             }
-            else{
+            else if(arr[i]&&arr[i++]&&arr[i]>arr[i+1]){
                 break;
             }
-            if(i!=n-1)
-                cout<<"NO"<<endl;
-            else if(i==n-1){
-                if(arr[i]==0)
-                        cout<<"YES"<<endl;
-                else    cout<<"NO"<<endl;
-            }
+            if(arr[i]==0)
+                count++;
         }
-    }
+        if(i==n-1){
+            if(arr[i]==0)   count++;
+            if(count == n)
+                cout<<"YES"<<endl;
+            else    
+            cout<<"NO"<<endl;
+        }
+        else    cout<<"NO"<<endl;
+    } 
 }
